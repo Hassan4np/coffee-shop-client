@@ -1,5 +1,6 @@
 
 import "./Navbar.css"
+import { FaSearch, FaShoppingBag } from "react-icons/fa";
 const Navbar = () => {
     return (
         <div>
@@ -31,7 +32,10 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <div className="flex p-5 bg-white rounded-full w-[70px] h-[40px] px-3 py-3">
+                        <FaSearch className="text-lg mr-5" />
+                        <FaShoppingBag className="text-lg " />
+                    </div>
                 </div>
             </div>
 
