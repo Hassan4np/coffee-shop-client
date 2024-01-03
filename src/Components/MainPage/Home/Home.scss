@@ -147,3 +147,38 @@ $family:"Poppins";
         padding: 11px 19px;
     }
 }
+
+.Newsletter {
+    h1 {
+        color: #FFF;
+        font-family: $family;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    p {
+        color: #FFF;
+        font-family: $family;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    input {
+        border-radius: 50px;
+        background: rgba(217, 217, 217, 0.30);
+    }
+    button {
+        color: #000;
+        font-family: $family;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border-radius: 50px;
+        background: #FFF;
+        padding: 10px 27px;
+        margin-top: 4px;
+    }
+}

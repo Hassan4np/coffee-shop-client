@@ -5,8 +5,8 @@ const News = () => {
     return (
         <div className="news mb-10">
             <h1>Our Latest News</h1>
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                <div className="w-[352px] h-[136px] border rounded-xl">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+                <div className="w-[352px] h-[136px] border rounded-xl mb-2">
                     <div className="flex  ">
                         <img className="w-[172px] h-[136px] mr-4" src={p1} alt="" />
                         <div className="p-2">
@@ -21,7 +21,7 @@ const News = () => {
                     </div>
 
                 </div>
-                <div className="w-[352px] h-[136px] border rounded-xl">
+                <div className="w-[352px] h-[136px] border rounded-xl mb-2">
                     <div className="flex  ">
                         <img className="w-[172px] h-[136px] mr-4" src={p1} alt="" />
                         <div  className="p-2">
@@ -36,7 +36,7 @@ const News = () => {
                     </div>
 
                 </div>
-                <div className="w-[352px] h-[136px] border rounded-xl">
+                <div className="w-[352px] h-[136px] border rounded-xl mb-2">
                     <div className="flex  ">
                         <img className="w-[172px] h-[136px] mr-4" src={p1} alt="" />
                         <div  className="p-2">

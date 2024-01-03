@@ -2,6 +2,7 @@ import Bannar from "../Global/Bannar";
 import Subbannar from "../Global/Subbannar";
 import CoffeeBannar from "./CoffeeBannar";
 import News from "./News";
+import Newsletter from "./Newsletter";
 import OurProducts from "./OurProducts";
 import QuestionSection from "./QuestionSection";
 
@@ -14,6 +15,7 @@ const Home = () => {
             <CoffeeBannar></CoffeeBannar>
             <QuestionSection></QuestionSection>
             <News></News>
+            < Newsletter></Newsletter>
            
         </div>
     );
