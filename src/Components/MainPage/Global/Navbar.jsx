@@ -1,10 +1,11 @@
 
+import { Link } from "react-router-dom";
 import "./Navbar.css"
 import { FaSearch, FaShoppingBag } from "react-icons/fa";
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar   opacity-75 absolute max-w-screen-xl z-10 h-[104px]">
+            <div className="navbar   opacity-75 max-w-screen-xl z-10 h-[104px] text-black">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -14,7 +15,7 @@ const Navbar = () => {
                             <li><a>Home</a></li>
                             <li><a>About</a></li>
                             <li><a>Menu</a></li>
-                            <li><a>Products</a></li>
+                            <Link to="/products"><li><a>Products</a></li></Link>
                             <li><a>News</a></li>
                             <li><a>lOCATIONS</a></li>
                         </ul>
@@ -26,7 +27,7 @@ const Navbar = () => {
                         <li><a>Home</a></li>
                         <li><a>About</a></li>
                         <li><a>Menu</a></li>
-                        <li><a>Products</a></li>
+                        <Link to="/products"><li><a>Products</a></li></Link>
                         <li><a>News</a></li>
                         <li><a>Location</a></li>
                     </ul>

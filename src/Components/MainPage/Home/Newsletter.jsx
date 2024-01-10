@@ -2,7 +2,7 @@
 import res from "../../../assets/Menu/Rectangle 4137.png"
 const Newsletter = () => {
     return (
-        <div className="w-full h-[204px] rounded-2xl Newsletter px-10 py-7" style={{ backgroundImage: `url('${res}')` }}>
+        <div className="w-full h-[204px] rounded-2xl Newsletter z-10 relative px-10 py-7" style={{ backgroundImage: `url('${res}')` }}>
             <h1 className="py-2">Newsletter</h1>
             <p className="mb-12">Subscribe and get 20% off your first purchase</p>
             <div className="w-full relative">
