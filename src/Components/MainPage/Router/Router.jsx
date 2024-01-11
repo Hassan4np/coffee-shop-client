@@ -4,6 +4,7 @@ import Home from "../Home/Home";
 import Error from "../Global/Error";
 import Products from "../Home/Products/Products";
 import ProductsDetails from "../Home/Products/ProductsDetails";
+import  Checkout  from "../Home/Products/Checkout";
 
 
 
@@ -24,6 +25,10 @@ const Mybrowser = createBrowserRouter([
       {
         path:'/details',
         element:<ProductsDetails></ProductsDetails>
+      },
+      {
+        path:'/checkout',
+        element:<Checkout></Checkout>
       }
     ]
   },

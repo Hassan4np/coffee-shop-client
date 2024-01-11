@@ -474,3 +474,56 @@ $family:"Poppins";
         }
     }
 }
+
+//checkout  page---------->
+.checkout {
+    .checkoutleftside {
+        h1 {
+            color: #000;
+            font-family: $family;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        p {
+            color: #6E6E6E;
+            font-family: $family;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        h5 {
+            color: #000;
+            font-family: $family;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        input {
+            padding: 2px 9px 2px 14px;
+            border-radius: 20px;
+            border: 1px solid black;
+        }
+    }
+    .checkoutrightside {
+        h2 {
+            color: black;
+            font-family: $family;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        p {
+            color: #000;
+            font-family: $family;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+}
