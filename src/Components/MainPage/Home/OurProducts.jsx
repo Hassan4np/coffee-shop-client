@@ -2,80 +2,33 @@ import { FaShoppingBag } from "react-icons/fa";
 import "./Home.scss"
 import p1 from "../../../assets/Menu/p1.png"
 import { Link } from "react-router-dom";
+import useAllProducts from "../Hook/useAllProducts";
 const OurProducts = () => {
+    const [data,isLoading,refetch] = useAllProducts();
+    if(isLoading){
+        return <h1 className="text-5xl">Loading...</h1>
+    }
+    console.log(data)
     return (
         <div className="Products mt-10 mb-10">
             <h1>Our Products</h1>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-6">
-                <Link>
-                    <div className="mb-7 w-[164px] h-[233px] bg-[#F4F4F4] rounded-2xl">
-                        <div className=" space-y-1">
-                            <div className="w-[164px] h-[187px] relative ">
-                                <FaShoppingBag className="text-lg absolute top-4 right-4  " />
-                                <img className="px-4 py-3" src={p1} alt="" />
+            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                {data?.map(item => <Link key={item._id} to={`/details/${item?._id}`}>
+                    <div className="w-[250px] h-[320px] border cards-section mb-2">
+                        <div className="flex justify-center w-full   bg-[#796a6a]  rounded-lg"><img className="h-[180px]" src={item?.img[0]} alt="" /></div>
+                        <div className="p-5">
+                            <div className="flex justify-between">
+                                <h2>{item?.name}</h2>
+                                <h5>${item?.price}</h5>
                             </div>
-                            <div className="flex px-1 ">
-                                <h5 className="mr-4">Espresso Ice Coffee</h5>
-                                <h6>$10.20</h6>
-                            </div>
-                            <p className="px-1">Category: <span className="font-medium">Ice Coffee</span></p>
+                            <p>Ice Coffee</p>
+                            <h6>{item?.rating} | 3098 Sold</h6>
                         </div>
-                    </div>
-                </Link>
-                <div className="mb-7 w-[164px] h-[233px] bg-[#F4F4F4] rounded-2xl">
-                    <div className=" space-y-1">
-                        <div className="w-[164px] h-[187px] relative ">
-                            <FaShoppingBag className="text-lg absolute top-4 right-4  " />
-                            <img className="px-4 py-3" src={p1} alt="" />
-                        </div>
-                        <div className="flex px-1 ">
-                            <h5 className="mr-4">Espresso Ice Coffee</h5>
-                            <h6>$10.20</h6>
-                        </div>
-                        <p className="px-1">Category: <span className="font-medium">Ice Coffee</span></p>
-                    </div>
-                </div>
-                <div className="mb-7 w-[164px] h-[233px] bg-[#F4F4F4] rounded-2xl">
-                    <div className=" space-y-1">
-                        <div className="w-[164px] h-[187px] relative ">
-                            <FaShoppingBag className="text-lg absolute top-4 right-4  " />
-                            <img className="px-4 py-3" src={p1} alt="" />
-                        </div>
-                        <div className="flex px-1 ">
-                            <h5 className="mr-4">Espresso Ice Coffee</h5>
-                            <h6>$10.20</h6>
-                        </div>
-                        <p className="px-1">Category: <span className="font-medium">Ice Coffee</span></p>
-                    </div>
-                </div>
-                <div className="mb-7 w-[164px] h-[233px] bg-[#F4F4F4] rounded-2xl">
-                    <div className=" space-y-1">
-                        <div className="w-[164px] h-[187px] relative ">
-                            <FaShoppingBag className="text-lg absolute top-4 right-4  " />
-                            <img className="px-4 py-3" src={p1} alt="" />
-                        </div>
-                        <div className="flex px-1 ">
-                            <h5 className="mr-4">Espresso Ice Coffee</h5>
-                            <h6>$10.20</h6>
-                        </div>
-                        <p className="px-1">Category: <span className="font-medium">Ice Coffee</span></p>
-                    </div>
-                </div>
-                <div className="mb-7 w-[164px] h-[233px] bg-[#F4F4F4] rounded-2xl">
-                    <div className=" space-y-1">
-                        <div className="w-[164px] h-[187px] relative ">
-                            <FaShoppingBag className="text-lg absolute top-4 right-4  " />
-                            <img className="px-4 py-3" src={p1} alt="" />
-                        </div>
-                        <div className="flex px-1 ">
-                            <h5 className="mr-4">Espresso Ice Coffee</h5>
-                            <h6>$10.20</h6>
-                        </div>
-                        <p className="px-1">Category: <span className="font-medium">Ice Coffee</span></p>
-                    </div>
-                </div>
+                    </div></Link>)}
+              
             </div>
-            <div className="flex justify-center "><button>View All</button>
+     
+            <div className="flex justify-center mt-10 "><button>View All</button>
             </div>
 
         </div>

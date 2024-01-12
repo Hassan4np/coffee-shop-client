@@ -1,0 +1,37 @@
+[{
+        "name": "Arabica Blend",
+        "price": 8.99,
+        "preprice": 10.99,
+        "rating": 4.5,
+        "img": ["https://i.ibb.co/THRDQfQ/download.jpg", "https://i.ibb.co/THRDQfQ/download.jpg"],
+        "description": "A rich blend of Arabica coffee beans with a smooth and balanced flavor profile.",
+        "tags": ["arabica", "blend", "medium roast"]
+    }, {
+        "name": "Espresso Dark Roast",
+        "price": 12.99,
+        "preprice": 14.99,
+        "rating": 4.2,
+        "img": ["https://i.ibb.co/THRDQfQ/download.jpg", "https://i.ibb.co/THRDQfQ/download.jpg"],
+        "description": "Intense and bold dark roast espresso, perfect for those who love a strong coffee kick.",
+        "tags": ["espresso", "dark roast", "intense"]
+    },
+    {
+        "name": "hot coffee",
+        "price": 9.99,
+        "preprice": 11.99,
+        "rating": 4.7,
+        "img": ["https://i.ibb.co/THRDQfQ/download.jpg", "https://i.ibb.co/THRDQfQ/download.jpg"],
+        "description": "Exquisite single-origin coffee with floral notes and a bright acidity characteristic of Ethiopian beans.",
+        "tags": ["single origin", "Ethiopia", "Yirgacheffe"]
+    },
+    {
+        "name": "Black coffee",
+        "price": 9.99,
+        "preprice": 11.99,
+        "rating": 4.7,
+        "img": ["https://i.ibb.co/THRDQfQ/download.jpg", "https://i.ibb.co/THRDQfQ/download.jpg"],
+        "description": "Exquisite single-origin coffee with floral notes and a bright acidity characteristic of Ethiopian beans.",
+        "tags": ["single origin", "Ethiopia", "Yirgacheffe"]
+    }
+
+]

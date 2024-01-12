@@ -1,7 +1,11 @@
 
 import { Link } from "react-router-dom";
-import p1 from "../../../../assets/Menu/p1.png"
+
+
+import useCategoryProducts from "../../Hook/useCategoryProducts";
 const Products = () => {
+
+    const [products,isLoading,refetch] = useCategoryProducts();
     return (
         <div className="Products flex justify-between gap-[100px] ">
             <div className="w-1/4 border rounded-xl py-3 px-5">
@@ -66,39 +70,19 @@ const Products = () => {
 
             </div>
             <div className="w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                <Link to='/details' ><div className="w-[250px] h-[320px] border cards-section mb-2">
-                    <div className="flex justify-center w-full   bg-[#796a6a]  rounded-lg"><img className="h-[180px]" src={p1} alt="" /></div>
-                    <div className="p-5">
-                        <div className="flex justify-between">
-                            <h2>Espresso Ice Coffee</h2>
-                            <h5>$10.00</h5>
+                {products?.map(item => <Link key={item._id} to={`/details/${item?._id}`}>
+                    <div className="w-[250px] h-[320px] border cards-section mb-2">
+                        <div className="flex justify-center w-full   bg-[#796a6a]  rounded-lg"><img className="h-[180px]" src={item?.img[0]} alt="" /></div>
+                        <div className="p-5">
+                            <div className="flex justify-between">
+                                <h2>{item?.name}</h2>
+                                <h5>${item?.price}</h5>
+                            </div>
+                            <p>Ice Coffee</p>
+                            <h6>{item?.rating} | 3098 Sold</h6>
                         </div>
-                        <p>Ice Coffee</p>
-                        <h6>4.5 | 3098 Sold</h6>
-                    </div>
-                </div></Link>
-                <div className="w-[250px] h-[320px] border cards-section mb-2">
-                    <div className="flex justify-center w-full   bg-[#796a6a]  rounded-lg"><img className="h-[180px]" src={p1} alt="" /></div>
-                    <div className="p-5">
-                        <div className="flex justify-between">
-                            <h2>Mochacino Latte</h2>
-                            <h5>$10.00</h5>
-                        </div>
-                        <p>Ice Coffee</p>
-                        <h6>4.5 | 3098 Sold</h6>
-                    </div>
-                </div>
-                <div className="w-[250px] h-[320px] border cards-section mb-2">
-                    <div className="flex justify-center w-full   bg-[#796a6a]  rounded-lg"><img className="h-[180px]" src={p1} alt="" /></div>
-                    <div className="p-5">
-                        <div className="flex justify-between">
-                            <h2>Cortado Ice Coffee</h2>
-                            <h5>$10.00</h5>
-                        </div>
-                        <p>Ice Coffee</p>
-                        <h6>4.5 | 3098 Sold</h6>
-                    </div>
-                </div>
+                    </div></Link>)}
+              
             </div>
 
         </div>
